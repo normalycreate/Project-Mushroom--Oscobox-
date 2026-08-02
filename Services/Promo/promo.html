@@ -68,7 +68,7 @@
         </div>
 
         <!-- Right: balance card -->
-        <div class="balance-card" aria-label="Saldo poin Anda">
+        <section class="balance-card">
           <p class="balance-card__label">SALDO ANDA</p>
           <div class="balance-card__pts">
             <span class="balance-card__num" id="balanceNum">8</span>
@@ -78,7 +78,7 @@
           <div class="balance-card__bar" aria-hidden="true">
             <div class="balance-card__bar-fill" id="balanceBar"></div>
           </div>
-        </div>
+        </section>
 
       </div>
     </section>
@@ -92,7 +92,7 @@
         <div class="promo-content__left">
 
           <!-- How to Claim Points -->
-          <div class="promo-card" aria-labelledby="howToTitle">
+          <div class="promo-card">
             <h2 class="promo-card__title" id="howToTitle">Cara Klaim Poin</h2>
 
             <ol class="steps-list">
@@ -134,12 +134,12 @@
           </div>
 
           <!-- Enter Product Code -->
-          <div class="promo-card" aria-labelledby="enterCodeTitle">
+          <div class="promo-card">
             <h2 class="promo-card__title" id="enterCodeTitle">Masukkan Kode Produk</h2>
             <p class="promo-card__hint">
-              Coba: <button class="hint-code" data-code="PROMO2026">PROMO2026</button>,
-              <button class="hint-code" data-code="GREEN10">GREEN10</button>, atau
-              <button class="hint-code" data-code="WELCOME5">WELCOME5</button>
+              Coba: <button type="button" class="hint-code" data-code="PROMO2026" title="Gunakan kode PROMO2026">PROMO2026</button>,
+              <button type="button" class="hint-code" data-code="GREEN10" title="Gunakan kode GREEN10">GREEN10</button>, atau
+              <button type="button" class="hint-code" data-code="WELCOME5" title="Gunakan kode WELCOME5">WELCOME5</button>
             </p>
 
             <form class="code-form" id="codeForm" novalidate aria-label="Formulir masuk kode produk">
@@ -175,14 +175,14 @@
         <div class="promo-content__right">
 
           <!-- Reward Tiers -->
-          <div class="promo-card" aria-labelledby="tiersTitle">
+          <div class="promo-card">
             <h2 class="promo-card__title" id="tiersTitle">Tingkat Reward</h2>
 
             <ul class="tiers-list" aria-label="Tingkat reward">
 
-              <li class="tier-item" id="tier-starter" aria-label="Starter Tier — Diskon 10%, 12 poin diperlukan">
+              <li class="tier-item" id="tier-starter" aria-label="Tier Pemula — Diskon 10%, 12 poin diperlukan">
                 <div class="tier-item__icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><title>Ikon hadiah</title><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
                 </div>
                 <div class="tier-item__body">
                   <p class="tier-item__name">Tier Pemula</p>
@@ -192,9 +192,9 @@
                 <div class="tier-item__status" id="tier-starter-status" aria-hidden="true"></div>
               </li>
 
-              <li class="tier-item" id="tier-silver" aria-label="Silver Tier — Diskon 15%, 15 poin diperlukan">
+              <li class="tier-item" id="tier-silver" aria-label="Tier Perak — Diskon 15%, 15 poin diperlukan">
                 <div class="tier-item__icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><title>Ikon hadiah</title><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
                 </div>
                 <div class="tier-item__body">
                   <p class="tier-item__name">Tier Perak</p>
@@ -204,9 +204,9 @@
                 <div class="tier-item__status" id="tier-silver-status" aria-hidden="true"></div>
               </li>
 
-              <li class="tier-item" id="tier-gold" aria-label="Gold Tier — Diskon 30%, 45 poin diperlukan">
+              <li class="tier-item" id="tier-gold" aria-label="Tier Emas — Diskon 30%, 45 poin diperlukan">
                 <div class="tier-item__icon" aria-hidden="true">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><title>Ikon hadiah</title><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
                 </div>
                 <div class="tier-item__body">
                   <p class="tier-item__name">Tier Emas</p>
@@ -220,15 +220,15 @@
           </div>
 
           <!-- Keep Going card -->
-          <div class="promo-card keep-going" id="keepGoingCard" aria-live="polite" aria-label="Kemajuan menuju voucher berikutnya">
+          <section class="promo-card keep-going" id="keepGoingCard" aria-live="polite" aria-label="Kemajuan menuju voucher berikutnya">
             <div class="keep-going__icon" aria-hidden="true">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><title>Ikon hadiah</title><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
             </div>
             <p class="keep-going__title" id="keepGoingTitle">Terus Maju!</p>
             <p class="keep-going__text" id="keepGoingText">
               Anda memerlukan <strong id="keepGoingNum">4 poin lagi</strong> untuk membuka voucher pertama Anda.
             </p>
-          </div>
+          </section>
 
         </div>
 
