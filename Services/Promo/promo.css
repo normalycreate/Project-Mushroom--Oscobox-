@@ -1,0 +1,512 @@
+/* ============================================================
+   promo.css — Oscobox Promo / Loyalty Rewards Page
+   ============================================================ */
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: #f4f4f4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding-top: var(--navbar-height);
+}
+
+/* Screen-reader only */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Navbar is handled entirely by ../../style.css */
+/* ============================================================
+   PROMO HERO STRIP
+   ============================================================ */
+.promo-hero {
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 36px 0 32px;
+}
+
+.promo-hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.promo-hero__label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  color: #16a34a;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.promo-hero__title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.promo-hero__sub {
+  font-size: 13.5px;
+  color: #6b7280;
+}
+
+/* Balance Card */
+.balance-card {
+  background: #fff;
+  border: 1.5px solid #22c55e;
+  border-radius: 12px;
+  padding: 18px 24px 16px;
+  min-width: 200px;
+  max-width: 240px;
+  flex-shrink: 0;
+}
+
+.balance-card__label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .1em;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.balance-card__pts {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.balance-card__num {
+  font-size: 40px;
+  font-weight: 700;
+  color: #16a34a;
+  line-height: 1;
+}
+
+.balance-card__unit {
+  font-size: 14px;
+  font-weight: 600;
+  color: #16a34a;
+}
+
+.balance-card__until {
+  font-size: 12px;
+  color: #6b7280;
+  margin-bottom: 10px;
+}
+
+.balance-card__bar {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.balance-card__bar-fill {
+  height: 100%;
+  background: #22c55e;
+  border-radius: 99px;
+  width: 0%;
+  transition: width .5s ease;
+}
+
+/* ============================================================
+   MAIN CONTENT GRID
+   ============================================================ */
+.promo-content { padding: 32px 0 48px; }
+
+.promo-content__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ============================================================
+   PROMO CARD (shared container)
+   ============================================================ */
+.promo-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 28px 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  margin-bottom: 20px;
+}
+.promo-card:last-child { margin-bottom: 0; }
+
+.promo-card__title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 20px;
+}
+
+/* ============================================================
+   HOW TO — STEPS LIST
+   ============================================================ */
+.steps-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.steps-list__item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.steps-list__badge {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: #16a34a;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.steps-list__heading {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.steps-list__text {
+  font-size: 12.5px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.steps-list__text em {
+  font-style: normal;
+  color: #16a34a;
+  font-weight: 500;
+}
+
+/* ============================================================
+   CODE FORM
+   ============================================================ */
+.promo-card__hint {
+  font-size: 12.5px;
+  color: #6b7280;
+  margin-bottom: 16px;
+}
+
+.hint-code {
+  background: none;
+  border: none;
+  color: #16a34a;
+  font-family: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline dotted;
+  transition: color .15s;
+}
+.hint-code:hover { color: #15803d; }
+
+.code-form { display: flex; flex-direction: column; gap: 10px; }
+
+.code-form__field { position: relative; }
+
+.code-form__input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #111827;
+  background: #fafafa;
+  outline: none;
+  transition: border-color .2s, box-shadow .2s;
+}
+.code-form__input::placeholder { color: #9ca3af; }
+.code-form__input:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 3px rgba(34,197,94,.15);
+  background: #fff;
+}
+.code-form__input.is-error { border-color: #ef4444; }
+.code-form__input.is-success { border-color: #22c55e; }
+
+.code-form__note {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11.5px;
+  color: #9ca3af;
+}
+
+.code-form__msg {
+  font-size: 12.5px;
+  font-weight: 500;
+  min-height: 18px;
+  border-radius: 6px;
+  padding: 0 4px;
+}
+.code-form__msg.msg--success { color: #16a34a; }
+.code-form__msg.msg--error   { color: #dc2626; }
+
+.btn-claim {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 13px 20px;
+  background: #16a34a;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s, transform .1s, box-shadow .2s;
+  box-shadow: 0 2px 8px rgba(22,163,74,.3);
+}
+.btn-claim:hover  { background: #15803d; box-shadow: 0 4px 12px rgba(22,163,74,.4); }
+.btn-claim:active { transform: scale(.98); }
+.btn-claim:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* ============================================================
+   REWARD TIERS
+   ============================================================ */
+.tiers-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tier-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #f9fafb;
+  border-radius: 10px;
+  border: 1.5px solid #e5e7eb;
+  transition: border-color .2s, background .2s;
+}
+
+.tier-item.is-unlocked {
+  background: #f0fdf4;
+  border-color: #86efac;
+}
+
+.tier-item__icon {
+  flex-shrink: 0;
+  width: 38px; height: 38px;
+  background: #e5e7eb;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  transition: background .2s, color .2s;
+}
+.tier-item.is-unlocked .tier-item__icon {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.tier-item__body { flex: 1; }
+
+.tier-item__name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.tier-item__req {
+  font-size: 11.5px;
+  color: #9ca3af;
+  margin-top: 1px;
+}
+
+.tier-item__pct {
+  font-size: 18px;
+  font-weight: 700;
+  color: #9ca3af;
+  min-width: 44px;
+  text-align: right;
+  transition: color .2s;
+}
+.tier-item.is-unlocked .tier-item__pct { color: #16a34a; }
+
+.tier-item__status {
+  width: 18px; height: 18px;
+  border: 2px solid #d1d5db;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: border-color .2s, background .2s;
+}
+.tier-item.is-unlocked .tier-item__status {
+  background: #22c55e;
+  border-color: #22c55e;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='3'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-size: 11px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ============================================================
+   KEEP GOING CARD
+   ============================================================ */
+.keep-going {
+  text-align: center;
+  padding: 32px 24px;
+}
+
+.keep-going__icon {
+  width: 56px; height: 56px;
+  background: #f0fdf4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  color: #22c55e;
+}
+
+.keep-going__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.keep-going__text {
+  font-size: 13px;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.keep-going__text strong { color: #16a34a; font-weight: 700; }
+
+/* Voucher unlocked state */
+.keep-going.is-unlocked .keep-going__icon { background: #dcfce7; color: #16a34a; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: #16a34a;
+  color: #fff;
+  padding: 32px 0;
+  margin-top: auto;
+}
+
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer__logo-link { display: inline-flex; }
+.footer__logo-img  { height: 28px; width: auto; filter: brightness(0) invert(1); }
+
+.footer__tagline {
+  font-size: 12px;
+  color: rgba(255,255,255,.75);
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+.footer__copy {
+  font-size: 12px;
+  color: rgba(255,255,255,.7);
+  text-align: center;
+}
+
+.footer__social { display: flex; gap: 14px; align-items: center; }
+.footer__social-link {
+  color: rgba(255,255,255,.8);
+  transition: color .2s, transform .2s;
+  display: inline-flex;
+}
+.footer__social-link:hover { color: #fff; transform: translateY(-2px); }
+.footer__social-icon { width: 20px; height: 20px; }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .promo-content__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .promo-hero__container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .balance-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .promo-hero__title { font-size: 22px; }
+
+  .promo-card { padding: 20px 18px; }
+
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+
+  .footer__social { justify-content: center; }
+}

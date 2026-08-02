@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OscoBox — Kemasan inovatif ramah lingkungan dengan sistem reward digital untuk mitra kuliner." />
+  <title>OscoBox — Kemasan Inovatif Ramah Lingkungan</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__container">
+
+      <!-- Logo -->
+      <a href="#home" class="navbar__logo" aria-label="OscoBox — Beranda">
+        <img src="img/OscoboxLogo.png" alt="OscoBox" class="navbar__logo-img" />
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="navbar__nav" aria-label="Navigasi utama">
+        <ul class="navbar__list">
+          <li><a href="#home"                                   class="navbar__link navbar__link--active">Home</a></li>
+          <li><a href="Services/Shopping/shopping.html"         class="navbar__link">Store</a></li>
+          <li><a href="Services/Promo/promo.html"               class="navbar__link">Promo</a></li>
+          <li><a href="Services/Order/order.html"               class="navbar__link">Order</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger (mobile) -->
+      <button type="button" class="navbar__hamburger" id="hamburgerBtn" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+      </button>
+
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="navbar__mobile" id="mobileMenu" aria-label="Navigasi mobile" aria-hidden="true">
+      <ul class="navbar__mobile-list">
+        <li><a href="#home"                                   class="navbar__mobile-link">Home</a></li>
+        <li><a href="Services/Shopping/shopping.html"         class="navbar__mobile-link">Store</a></li>
+        <li><a href="Services/Promo/promo.html"               class="navbar__mobile-link">Promo</a></li>
+        <li><a href="Services/Order/order.html"               class="navbar__mobile-link">Order</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home" aria-label="Hero — Selamat datang di OscoBox">
+      <div class="hero__container">
+
+        <!-- Left: Text Content -->
+        <div class="hero__content reveal">
+
+          <!-- Breadcrumb pills -->
+          <nav class="hero__breadcrumb" aria-label="Breadcrumb">
+            <span class="hero__pill">Reduce</span>
+            <span class="hero__pill-sep" aria-hidden="true">&rsaquo;</span>
+            <span class="hero__pill">Reuse</span>
+            <span class="hero__pill-sep" aria-hidden="true">&rsaquo;</span>
+            <span class="hero__pill">Recycle</span>
+          </nav>
+
+          <!-- Headline -->
+          <h1 class="hero__title">
+            Halo, Kami<br />
+            <span class="hero__title--green">OscoBox</span>
+          </h1>
+
+          <!-- Subtext -->
+          <p class="hero__description">
+            OscoBox adalah sebuah inovasi kemasan masa depan yang memiliki keunggulan dalam pemanfaatan 
+            ampas tahu dan miselium jamur. Kami berdedikasi untuk menciptakan produk pengemasan yang fungsional, 
+            100% ramah lingkungan, dan bernilai estetika tinggi.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="hero__cta">
+            <a href="Services/Shopping/shopping.html" class="btn btn--primary btn--lg">Belanja Sekarang</a>
+            <a href="#features" class="btn btn--outline btn--lg">Lihat Selengkapnya</a>
+          </div>
+
+          <!-- Trust Badges -->
+          <div class="hero__trust">
+            <div class="hero__trust-logos">
+              <img src="img/userhero.png" alt="Mitra terpercaya OscoBox" class="hero__trust-img" />
+            </div>
+            <div class="hero__trust-rating">
+              <span class="hero__stars" aria-hidden="true">★★★★★</span>
+              <span class="hero__rating-text">670+ ulasan dari pengguna</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Product Image -->
+        <div class="hero__visual reveal">
+          <!-- Decorative square top-right -->
+          <div class="hero__deco hero__deco--top" aria-hidden="true"></div>
+
+          <div class="hero__image-wrapper">
+            <img
+              src="img/oscobox.jpeg"
+              alt="Produk OscoBox — kemasan makanan ramah lingkungan"
+              class="hero__image"
+              loading="eager"
+            />
+          </div>
+
+          <!-- Decorative square bottom-right -->
+          <div class="hero__deco hero__deco--bottom" aria-hidden="true"></div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========== WHY OSCOBOX SECTION ========== -->
+    <section class="features" id="features" aria-labelledby="featuresTitle">
+      <!-- Background overlay using product image -->
+      <div class="features__bg" aria-hidden="true"></div>
+
+      <div class="features__container">
+
+        <div class="features__header reveal">
+          <h2 class="features__title" id="featuresTitle">
+            Kenapa harus <span class="text--green">OscoBox?</span>
+          </h2>
+          <p class="features__subtitle">
+            Kami menggabungkan teknologi kemasan mutakhir dengan sistem digital cerdas 
+            untuk membantu bisnis Anda berkembang berkelanjutan.
+          </p>
+        </div>
+
+        <!-- 2x2 Feature Cards Grid -->
+        <div class="features__grid">
+
+          <article class="feature-card reveal" aria-label="Proteksi">
+            <div class="feature-card__icon" aria-hidden="true">🛡️</div>
+            <h3 class="feature-card__title">Proteksi</h3>
+            <p class="feature-card__text">
+              Kemasan inovatif ini secara khusus dirancang menjadi super kokoh, sangat tahan 
+              banting, serta tahan air guna menjaga setiap produk makanan beku Anda tetap aman 
+              terlindungi tanpa adanya paparan zat karsinogenik.
+            </p>
+          </article>
+
+          <article class="feature-card reveal" aria-label="Ramah Lingkungan">
+            <div class="feature-card__icon" aria-hidden="true">♻️</div>
+            <h3 class="feature-card__title">Ramah Lingkungan</h3>
+            <p class="feature-card__text">
+              Terbuat dari inovasi material organik berbahan dasar ampas tahu dan miselium jamur, 
+              kotak ini 100% ramah lingkungan karena dapat terurai secara alami dan didaur ulang 
+              menjadi pupuk kompos yang kaya nutrisi mikroba.
+            </p>
+          </article>
+
+          <article class="feature-card reveal" aria-label="QR Code">
+            <div class="feature-card__icon" aria-hidden="true">📱</div>
+            <h3 class="feature-card__title">QR Code</h3>
+            <p class="feature-card__text">
+              Setiap kemasan dilengkapi dengan fitur Smart QR Code guna memudahkan pelanggan saat mengakses 
+              detail produk, panduan pengomposan, serta mengumpulkan poin loyalitas untuk langsung ditukarkan 
+              menjadi voucher diskon.
+            </p>
+          </article>
+
+          <article class="feature-card reveal" aria-label="Profitabilitas">
+            <div class="feature-card__icon" aria-hidden="true">💰</div>
+            <h3 class="feature-card__title">Profitabilitas</h3>
+            <p class="feature-card__text">
+              Integrasi antara kemasan inovatif dan sistem reward digital cerdas ini tidak hanya mampu 
+              menjaga kelestarian bumi, tetapi juga dirancang secara khusus untuk meningkatkan retensi 
+              seluruh pelanggan dan profitabilitas bisnis secara jangka panjang.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== HOW POINTS WORK SECTION ========== -->
+    <section class="points" id="promo" aria-labelledby="pointsTitle">
+      <div class="points__container">
+
+        <!-- Left: Steps -->
+        <div class="points__content reveal">
+          <span class="section-pill">Loyalty Program</span>
+
+          <h2 class="points__title" id="pointsTitle">
+            Bagaimana <span class="text--green">Point</span> Bekerja?
+          </h2>
+
+          <ol class="points__steps">
+
+            <li class="points__step">
+              <div class="points__step-number" aria-hidden="true">1</div>
+              <div class="points__step-body">
+                <h3 class="points__step-title">Belanja &amp; Hasilkan</h3>
+                <p class="points__step-text">
+                  Hasilkan point setiap belanja. Anda bisa scan kode promo untuk point bonus.
+                </p>
+              </div>
+            </li>
+
+            <li class="points__step">
+              <div class="points__step-number" aria-hidden="true">2</div>
+              <div class="points__step-body">
+                <h3 class="points__step-title">Raih Tingkatan</h3>
+                <p class="points__step-text">
+                  Dapatkan 12, 15, atau tambah 45 poin untuk mendapatkan voucher. 
+                  Makin banyak makin buat untung.
+                </p>
+              </div>
+            </li>
+
+            <li class="points__step">
+              <div class="points__step-number" aria-hidden="true">3</div>
+              <div class="points__step-body">
+                <h3 class="points__step-title">Tukarkan Reward</h3>
+                <p class="points__step-text">
+                  Tukarkan point yang terkumpul dengan voucher diskon eksklusif dan nikmati 
+                  keuntungan lebih dari setiap transaksi.
+                </p>
+              </div>
+            </li>
+
+          </ol>
+
+          <a href="/Services/Promo/promo.html" class="btn btn--outline btn--md">Pelajari lebih</a>
+        </div>
+
+        <!-- Right: Tier Cards -->
+        <div class="points__tiers reveal">
+
+          <div class="tier-card tier-card--light">
+            <div class="tier-card__body">
+              <div class="tier-card__points">10 <span>point</span></div>
+              <p class="tier-card__desc">
+                Kumpulkan 10 point dari pembelian pertama Anda dan dapatkan reward langsung.
+              </p>
+            </div>
+            <div class="tier-card__badge">diskon 10%</div>
+          </div>
+
+          <div class="tier-card tier-card--mid">
+            <div class="tier-card__body">
+              <div class="tier-card__points">15 <span>point</span></div>
+              <p class="tier-card__desc">
+                Tingkatkan ke 16 point untuk voucher yang lebih besar dan akses fitur premium.
+              </p>
+            </div>
+            <div class="tier-card__badge">diskon 15%</div>
+          </div>
+
+          <div class="tier-card tier-card--dark">
+            <div class="tier-card__body">
+              <div class="tier-card__points">45 <span>point</span></div>
+              <p class="tier-card__desc">
+                Capai 40 point untuk diskon terbesar dan keuntungan eksklusif mitra setia OscoBox.
+              </p>
+            </div>
+            <div class="tier-card__badge">diskon 30%</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========== TESTIMONIALS SECTION ========== -->
+    <section class="testimonials" id="blog" aria-labelledby="testimonialsTitle">
+      <div class="testimonials__container">
+
+        <div class="testimonials__header reveal">
+          <span class="section-pill">ULASAN PRODUK</span>
+          <h2 class="testimonials__title" id="testimonialsTitle">Apa Kata Mereka</h2>
+        </div>
+
+        <div class="testimonials__grid">
+
+          <article class="testimonial-card reveal" aria-label="Ulasan dari Edward Panci">
+            <div class="testimonial-card__stars" aria-hidden="true">★★★★★</div>
+            <blockquote class="testimonial-card__text">
+              Pengiriman secepat kilat, pesan pagi sorenya langsung sampai lewat teleportasi WhatsApp. 
+              Hebatnya lagi, setelah pakai Oscobox ini, IQ saya naik 50 poin dan kucing saya jadi bisa 
+              ngomong bahasa Mandarin. Toko paling the best!
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar" aria-hidden="true">E</div>
+              <div class="testimonial-card__info">
+                <strong class="testimonial-card__name">Edward Panci</strong>
+                <span class="testimonial-card__role">Customer</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal" aria-label="Ulasan dari Arkananta Reynard">
+            <div class="testimonial-card__stars" aria-hidden="true">★★★★★</div>
+            <blockquote class="testimonial-card__text">
+              Solusi penyimpanan yang benar-benar berkelanjutan! Kombinasi material ampas tahu dan miselium 
+              jamurnya sangat kokoh, estetik, dan yang paling penting bisa terurai secara alami kembali ke 
+              bumi tanpa mencemari lingkungan.
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar testimonial-card__avatar--b" aria-hidden="true">A</div>
+              <div class="testimonial-card__info">
+                <strong class="testimonial-card__name">Arkananta Reynard</strong>
+                <span class="testimonial-card__role">Customer</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="testimonial-card reveal" aria-label="Ulasan dari Andy Paris">
+            <div class="testimonial-card__stars" aria-hidden="true">★★★★★</div>
+            <blockquote class="testimonial-card__text">
+              Terbuat dari inovasi material organik berbahan dasar ampas tahu dan miselium jamur, kotak ini 100% ramah 
+              lingkungan karena dapat terurai secara alami dan didaur ulang menjadi pupuk kompos yang kaya nutrisi mikroba.
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar testimonial-card__avatar--c" aria-hidden="true">A</div>
+              <div class="testimonial-card__info">
+                <strong class="testimonial-card__name">Andy Paris</strong>
+                <span class="testimonial-card__role">Customer</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ========== MITRA CTA SECTION ========== -->
+    <section class="cta-section" id="mitra" aria-labelledby="ctaTitle">
+      <div class="cta-section__container reveal">
+        <h2 class="cta-section__title" id="ctaTitle">
+          Siap Bergabung Bersama <span class="text--footer">OscoBox?</span>
+        </h2>
+        <p class="cta-section__text">
+          Jadilah bagian dari gerakan yang berkelanjutan. Daftar sekarang dan nikmati 
+          keuntungan eksklusif sebagai mitra OscoBox.
+        </p>
+        <div class="cta-section__actions">
+          <a href="https://wa.me/+6281210765134" class="btn btn--primary btn--lg">Ada Pertanyaan?</a>
+          <a href="#features" class="btn btn--outline-white btn--lg">Pelajari Lebih</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__container">
+
+      <!-- Brand -->
+      <div class="footer__brand">
+        <a href="#home" class="footer__logo-link" aria-label="OscoBox — Beranda">
+          <img src="img/OscoboxLogo.png" alt="OscoBox" class="footer__logo-img" />
+        </a>
+        <p class="footer__tagline">
+          Kemasan inovatif ramah lingkungan<br />dengan reward digital untuk mitra bisnis.
+        </p>
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer__copy">
+        <p>&copy; 2026 PT Pecinta Perdamian. All rights reserved.</p>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="footer__social">
+        <a href="https://youtube.com" class="footer__social-link" aria-label="YouTube OscoBox" target="_blank" rel="noopener noreferrer">
+          <svg class="footer__social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </a>
+        <a href="https://instagram.com" class="footer__social-link" aria-label="Instagram OscoBox" target="_blank" rel="noopener noreferrer">
+          <svg class="footer__social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+          </svg>
+        </a>
+        <a href="https://tiktok.com" class="footer__social-link" aria-label="TikTok OscoBox" target="_blank" rel="noopener noreferrer">
+          <svg class="footer__social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

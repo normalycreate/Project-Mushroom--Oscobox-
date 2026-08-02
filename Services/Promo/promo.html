@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OscoBox Promo — Klaim poin reward loyalitas Anda dan buka voucher diskon." />
+  <title>OscoBox — Promo & Reward Loyalitas</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="promo.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__container">
+
+      <a href="../../index.html" class="navbar__logo" aria-label="OscoBox — Beranda">
+        <img src="../../img/OscoboxLogo.png" alt="OscoBox" class="navbar__logo-img" />
+      </a>
+
+      <nav class="navbar__nav" aria-label="Navigasi utama">
+        <ul class="navbar__list">
+          <li><a href="../../index.html#home"          class="navbar__link">Home</a></li>
+          <li><a href="../Shopping/shopping.html"      class="navbar__link">Store</a></li>
+          <li><a href="promo.html"                     class="navbar__link navbar__link--active">Promo</a></li>
+          <li><a href="../Order/order.html"            class="navbar__link">Order</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="navbar__hamburger" id="hamburgerBtn"
+              aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+      </button>
+    </div>
+
+    <nav class="navbar__mobile" id="mobileMenu" aria-label="Navigasi mobile" aria-hidden="true">
+      <ul class="navbar__mobile-list">
+        <li><a href="../../index.html#home"          class="navbar__mobile-link">Beranda</a></li>
+        <li><a href="../Shopping/shopping.html"      class="navbar__mobile-link">Toko</a></li>
+        <li><a href="promo.html"                     class="navbar__mobile-link">Promo</a></li>
+        <li><a href="../Order/order.html"            class="navbar__mobile-link">Pesanan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ========== HERO STRIP ========== -->
+    <section class="promo-hero" aria-labelledby="promoHeroTitle">
+      <div class="promo-hero__container">
+
+        <!-- Left: heading -->
+        <div class="promo-hero__left">
+          <span class="promo-hero__label">REWARD LOYALITAS</span>
+          <h1 class="promo-hero__title" id="promoHeroTitle">Klaim Poin Anda</h1>
+          <p class="promo-hero__sub">
+            Halo, <strong id="userName">Tamu</strong>! Masukkan kode produk untuk mendapatkan poin.
+          </p>
+        </div>
+
+        <!-- Right: balance card -->
+        <div class="balance-card" aria-label="Saldo poin Anda">
+          <p class="balance-card__label">SALDO ANDA</p>
+          <div class="balance-card__pts">
+            <span class="balance-card__num" id="balanceNum">8</span>
+            <span class="balance-card__unit">poin</span>
+          </div>
+          <p class="balance-card__until" id="balanceUntil">4 poin hingga voucher 10%</p>
+          <div class="balance-card__bar" aria-hidden="true">
+            <div class="balance-card__bar-fill" id="balanceBar"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ========== MAIN CONTENT GRID ========== -->
+    <section class="promo-content" aria-label="Konten promo">
+      <div class="promo-content__container">
+
+        <!-- LEFT COLUMN -->
+        <div class="promo-content__left">
+
+          <!-- How to Claim Points -->
+          <div class="promo-card" aria-labelledby="howToTitle">
+            <h2 class="promo-card__title" id="howToTitle">Cara Klaim Poin</h2>
+
+            <ol class="steps-list">
+
+              <li class="steps-list__item">
+                <div class="steps-list__badge" aria-hidden="true">1</div>
+                <div class="steps-list__body">
+                  <h3 class="steps-list__heading">Dapatkan Kode Produk</h3>
+                  <p class="steps-list__text">
+                    Temukan <em>kode unik</em> di kemasan produk Anda, bukti pembelian,
+                    atau dalam pesan promosi yang Anda terima.
+                  </p>
+                </div>
+              </li>
+
+              <li class="steps-list__item">
+                <div class="steps-list__badge" aria-hidden="true">2</div>
+                <div class="steps-list__body">
+                  <h3 class="steps-list__heading">Masukkan Kode di Bawah</h3>
+                  <p class="steps-list__text">
+                    Ketik atau tempel kode ke kolom input di bawah. Kode <em>tidak peka huruf besar/kecil</em>
+                    dan harus 6–12 karakter.
+                  </p>
+                </div>
+              </li>
+
+              <li class="steps-list__item">
+                <div class="steps-list__badge" aria-hidden="true">3</div>
+                <div class="steps-list__body">
+                  <h3 class="steps-list__heading">Poin Ditambahkan Langsung</h3>
+                  <p class="steps-list__text">
+                    Kode yang valid akan langsung menambah poin ke saldo Anda.
+                    Kumpulkan cukup poin untuk membuka voucher diskon.
+                  </p>
+                </div>
+              </li>
+
+            </ol>
+          </div>
+
+          <!-- Enter Product Code -->
+          <div class="promo-card" aria-labelledby="enterCodeTitle">
+            <h2 class="promo-card__title" id="enterCodeTitle">Masukkan Kode Produk</h2>
+            <p class="promo-card__hint">
+              Coba: <button class="hint-code" data-code="PROMO2026">PROMO2026</button>,
+              <button class="hint-code" data-code="GREEN10">GREEN10</button>, atau
+              <button class="hint-code" data-code="WELCOME5">WELCOME5</button>
+            </p>
+
+            <form class="code-form" id="codeForm" novalidate aria-label="Formulir masuk kode produk">
+              <div class="code-form__field">
+                <label for="codeInput" class="sr-only">Kode produk</label>
+                <input
+                  type="text"
+                  id="codeInput"
+                  class="code-form__input"
+                  placeholder="contoh: PROMO2026"
+                  maxlength="12"
+                  autocomplete="off"
+                  spellcheck="false"
+                  aria-describedby="codeHint codeMsg"
+                />
+              </div>
+              <p class="code-form__note" id="codeHint">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                Kode tidak peka huruf besar/kecil. Maks 1 kode per kali.
+              </p>
+              <p class="code-form__msg" id="codeMsg" role="alert" aria-live="polite"></p>
+
+              <button type="submit" class="btn-claim" id="claimBtn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                Klaim Poin
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="promo-content__right">
+
+          <!-- Reward Tiers -->
+          <div class="promo-card" aria-labelledby="tiersTitle">
+            <h2 class="promo-card__title" id="tiersTitle">Tingkat Reward</h2>
+
+            <ul class="tiers-list" aria-label="Tingkat reward">
+
+              <li class="tier-item" id="tier-starter" aria-label="Starter Tier — Diskon 10%, 12 poin diperlukan">
+                <div class="tier-item__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+                </div>
+                <div class="tier-item__body">
+                  <p class="tier-item__name">Tier Pemula</p>
+                  <p class="tier-item__req">12 poin diperlukan</p>
+                </div>
+                <div class="tier-item__pct">10%</div>
+                <div class="tier-item__status" id="tier-starter-status" aria-hidden="true"></div>
+              </li>
+
+              <li class="tier-item" id="tier-silver" aria-label="Silver Tier — Diskon 15%, 15 poin diperlukan">
+                <div class="tier-item__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+                </div>
+                <div class="tier-item__body">
+                  <p class="tier-item__name">Tier Perak</p>
+                  <p class="tier-item__req">15 poin diperlukan</p>
+                </div>
+                <div class="tier-item__pct">15%</div>
+                <div class="tier-item__status" id="tier-silver-status" aria-hidden="true"></div>
+              </li>
+
+              <li class="tier-item" id="tier-gold" aria-label="Gold Tier — Diskon 30%, 45 poin diperlukan">
+                <div class="tier-item__icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+                </div>
+                <div class="tier-item__body">
+                  <p class="tier-item__name">Tier Emas</p>
+                  <p class="tier-item__req">45 poin diperlukan</p>
+                </div>
+                <div class="tier-item__pct">30%</div>
+                <div class="tier-item__status" id="tier-gold-status" aria-hidden="true"></div>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- Keep Going card -->
+          <div class="promo-card keep-going" id="keepGoingCard" aria-live="polite" aria-label="Kemajuan menuju voucher berikutnya">
+            <div class="keep-going__icon" aria-hidden="true">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 12V22H4V12"/><path d="M22 7H2v5h20V7z"/><path d="M12 22V7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+            </div>
+            <p class="keep-going__title" id="keepGoingTitle">Terus Maju!</p>
+            <p class="keep-going__text" id="keepGoingText">
+              Anda memerlukan <strong id="keepGoingNum">4 poin lagi</strong> untuk membuka voucher pertama Anda.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <a href="../../index.html" class="footer__logo-link" aria-label="OscoBox — Beranda">
+          <img src="../../img/OscoboxLogo.png" alt="OscoBox" class="footer__logo-img" />
+        </a>
+        <p class="footer__tagline">
+          Kemasan inovatif ramah lingkungan<br />dengan sistem reward digital untuk mitra kuliner.
+        </p>
+      </div>
+      <div class="footer__copy">
+        <p>&copy; 2026 PT Pecinta Perdamaian. Semua hak dilindungi.</p>
+      </div>
+      <div class="footer__social">
+        <a href="https://youtube.com" class="footer__social-link" aria-label="YouTube OscoBox" target="_blank" rel="noopener noreferrer">
+          <svg class="footer__social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        </a>
+        <a href="https://instagram.com" class="footer__social-link" aria-label="Instagram OscoBox" target="_blank" rel="noopener noreferrer">
+          <svg class="footer__social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+        </a>
+        <a href="https://tiktok.com" class="footer__social-link" aria-label="TikTok OscoBox" target="_blank" rel="noopener noreferrer">
+          <svg class="footer__social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.76a4.85 4.85 0 0 1-1.01-.07z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="promo.js"></script>
+</body>
+</html>

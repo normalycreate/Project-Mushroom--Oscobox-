@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OscoBox — Riwayat pesanan Anda." />
+  <title>OscoBox — Pesanan Saya</title>
+
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="order.css" />
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__container">
+
+      <a href="../../index.html" class="navbar__logo" aria-label="OscoBox — Beranda">
+        <img src="../../img/OscoboxLogo.png" alt="OscoBox" class="navbar__logo-img" />
+      </a>
+
+      <nav class="navbar__nav" aria-label="Navigasi utama">
+        <ul class="navbar__list">
+          <li><a href="../../index.html#home"           class="navbar__link">Home</a></li>
+          <li><a href="../Shopping/shopping.html"        class="navbar__link">Store</a></li>
+          <li><a href="../Promo/promo.html"              class="navbar__link">Promo</a></li>
+          <li><a href="order.html"                       class="navbar__link navbar__link--active">Order</a></li>
+        </ul>
+      </nav>
+
+      <button type="button" class="navbar__hamburger" id="hamburgerBtn"
+              aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+      </button>
+    </div>
+
+    <nav class="navbar__mobile" id="mobileMenu" aria-label="Navigasi mobile" aria-hidden="true">
+      <ul class="navbar__mobile-list">
+        <li><a href="../../index.html#home"    class="navbar__mobile-link">Home</a></li>
+        <li><a href="../Shopping/shopping.html" class="navbar__mobile-link">Store</a></li>
+        <li><a href="../Promo/promo.html"       class="navbar__mobile-link">Promo</a></li>
+        <li><a href="order.html"               class="navbar__mobile-link">Order</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ========== MAIN ========== -->
+  <main class="orders-page">
+    <div class="orders-page__container">
+
+      <h1 class="orders-page__title">Pesanan Saya</h1>
+
+      <!-- Filter tabs -->
+      <div class="orders-tabs" role="tablist" aria-label="Filter pesanan">
+        <button type="button" class="orders-tab orders-tab--active" role="tab"
+                aria-selected="true" data-filter="all">
+          Semua Pesanan <span class="orders-tab__count" id="countAll">0</span>
+        </button>
+        <button type="button" class="orders-tab" role="tab"
+                aria-selected="false" data-filter="shipping">
+          Sedang Dikirim <span class="orders-tab__count" id="countShipping">0</span>
+        </button>
+        <button type="button" class="orders-tab" role="tab"
+                aria-selected="false" data-filter="completed">
+          Selesai <span class="orders-tab__count" id="countCompleted">0</span>
+        </button>
+      </div>
+
+      <!-- Order list -->
+      <ul class="orders-list" id="orderList" aria-label="Daftar pesanan">
+        <!-- Injected by order.js -->
+      </ul>
+
+      <!-- Empty state -->
+      <div class="orders-empty" id="ordersEmpty" hidden>
+        <div class="orders-empty__icon" aria-hidden="true">📦</div>
+        <p class="orders-empty__title">Belum ada pesanan</p>
+        <p class="orders-empty__sub">Yuk, belanja sekarang dan dapatkan reward poin!</p>
+        <a href="../Shopping/shopping.html" class="btn btn--primary btn--md">Belanja Sekarang</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ========== TOAST ========== -->
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="order.js"></script>
+</body>
+</html>
