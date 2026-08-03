@@ -10,8 +10,8 @@ const PRODUCTS = [
     id: 'mini',
     name: 'Mini Oscobox',
     size: 'Kecil',
-    desc: 'Wadah korporat porsi tunggal yang mengamankan sampel dan mendongkrak skor ESG perusahaan.',
-    price: 45000,
+    desc: 'Wadah korporat porsi tunggal yang mengamankan sampel dan mendongkrak skor ESG perusahaan. (Kapasitas 1–2 kg, contoh ukuran 34x25x16 cm)',
+    price: 30000,
     reviews: 675,
     img: '../../img/oscobox with background small.png',
   },
@@ -19,8 +19,8 @@ const PRODUCTS = [
     id: 'regular',
     name: 'Regular Oscobox',
     size: 'Sedang',
-    desc: 'Wadah berbahan organik untuk menekan limbah dan audit keberlanjutan.',
-    price: 85000,
+    desc: 'Wadah berbahan organik untuk menekan limbah dan audit keberlanjutan. (Kapasitas 3–5 kg, contoh ukuran 34x25x30 cm)',
+    price: 40000,
     reviews: 312,
     img: '../../img/oscobox with background medium.png',
   },
@@ -28,8 +28,8 @@ const PRODUCTS = [
     id: 'large',
     name: 'Large Oscobox',
     size: 'Besar',
-    desc: 'Pasokan masif frozen food untuk mengeliminasi limbah industri demi laporan hijau perusahaan.',
-    price: 145000,
+    desc: 'Pasokan masif frozen food untuk mengeliminasi limbah industri demi laporan hijau perusahaan. (Kapasitas di atas 5 kg, contoh ukuran 52x38x34 cm)',
+    price: 75000,
     reviews: 95,
     img: '../../img/oscobox with background large.png',
   },
@@ -37,9 +37,16 @@ const PRODUCTS = [
 
 /* ── Valid voucher codes (from promo page) ─────────────────── */
 const VOUCHER_CODES = {
-  'PROMO2026': 0.10,  // 10% discount
-  'GREEN10':   0.15,  // 15% discount
-  'WELCOME5':  0.30,  // 30% discount
+  'PROMO2026':  0.10,  // 10% discount
+  'GREEN10':    0.15,  // 15% discount
+  'WELCOME5':   0.30,  // 30% discount
+  'EARTH2026':  0.10,  // 10% discount
+  'SPRING10':   0.15,  // 15% discount
+  'FRESH5':     0.30,  // 30% discount
+  'ECOBOX7':    0.10,  // 10% discount
+  'PLANET3':    0.15,  // 15% discount
+  'OSCO5':      0.10,  // 10% discount
+  'REWARD3':    0.15,  // 15% discount
 };
 
 /* ── Helpers ─────────────────────────────────────────────── */
@@ -140,7 +147,7 @@ function renderProducts() {
           alt="${product.name}"
           class="product-card__img"
           loading="lazy"
-          onerror="this.src='../../img/oscobox.jpeg'"
+          onerror="this.src='../../img/oscobox.jpg'"
         />
       </div>
       <div class="product-card__body">
@@ -218,7 +225,7 @@ function updateCartUI() {
           src="${p.img}"
           alt="${p.name}"
           class="cart-item__img"
-          onerror="this.src='../../img/oscobox.jpeg'"
+          onerror="this.src='../../img/oscobox.jpg'"
         />
         <div class="cart-item__info">
           <div class="cart-item__name">${p.name}</div>
@@ -468,6 +475,21 @@ checkoutForm.addEventListener('submit', (e) => {
   try {
     localStorage.setItem(ORDERS_KEY, JSON.stringify(orders));
   } catch (_) {}
+
+  // Reset points and mark voucher as used if applied
+  if (appliedVoucher) {
+    const STATE_KEY = 'oscobox_promo_state';
+    try {
+      const promoState = JSON.parse(localStorage.getItem(STATE_KEY)) || { points: 0, usedCodes: [] };
+      // Reset points to 0
+      promoState.points = 0;
+      // Mark voucher code as used
+      if (!promoState.usedCodes.includes(appliedVoucher.code)) {
+        promoState.usedCodes.push(appliedVoucher.code);
+      }
+      localStorage.setItem(STATE_KEY, JSON.stringify(promoState));
+    } catch (_) {}
+  }
 
   // Clear cart
   cart = {};

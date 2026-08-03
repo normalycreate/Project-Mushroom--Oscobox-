@@ -8,11 +8,16 @@
    1. KODE YANG VALID  (kode → poin yang diberikan)
    ---------------------------------------------------------- */
 const VALID_CODES = {
-  PROMO2026: 4,
-  GREEN10:   3,
-  WELCOME5:  2,
-  OSCO5:     5,
-  REWARD3:   3,
+  PROMO2026:  4,
+  GREEN10:    3,
+  WELCOME5:   2,
+  OSCO5:      5,
+  REWARD3:    3,
+  EARTH2026:  4,
+  SPRING10:   3,
+  FRESH5:     2,
+  ECOBOX7:    5,
+  PLANET3:    3,
 };
 
 /* ----------------------------------------------------------
@@ -148,6 +153,11 @@ function animateBump(el) {
   }, 180);
 }
 
+/* ----------------------------------------------------------
+   RESET CODE CONSTANT
+   ---------------------------------------------------------- */
+const RESET_CODE = 'OSCOBOXRESETCODE03082026';
+
 codeForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -162,9 +172,26 @@ codeForm.addEventListener('submit', (e) => {
     return;
   }
 
-  /* --- Cek panjang (6–12 karakter) --- */
-  if (code.length < 6 || code.length > 12) {
-    setMsg('Kode harus antara 6 dan 12 karakter.', 'error');
+  /* --- Cek kode reset khusus --- */
+  if (code === RESET_CODE) {
+    const state = loadState();
+    state.usedCodes = [];
+    saveState(state);
+    setMsg('✅ Semua kode voucher telah direset! Anda dapat menggunakan voucher lagi.', 'success');
+    setInputState('success');
+    codeInput.value = '';
+    
+    // Hapus pesan sukses setelah 5 detik
+    setTimeout(() => {
+      setMsg('', '');
+      setInputState('');
+    }, 5000);
+    return;
+  }
+
+  /* --- Cek panjang (6–12 karakter) untuk kode biasa --- */
+  if (code.length < 4 || code.length > 12) {
+    setMsg('Kode harus antara 4 dan 12 karakter.', 'error');
     setInputState('error');
     codeInput.focus();
     return;

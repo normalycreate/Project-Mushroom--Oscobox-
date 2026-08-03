@@ -82,7 +82,7 @@ function seedDemoOrders() {
       name: 'Regular Oscobox',
       size: 'Sedang',
       qty: 2,
-      total: 170000,
+      total: 80000,
       status: 'completed',
     },
     {
@@ -92,7 +92,7 @@ function seedDemoOrders() {
       name: 'Mini Oscobox',
       size: 'Kecil',
       qty: 1,
-      total: 45000,
+      total: 30000,
       status: 'shipping',
     },
   ];
@@ -248,7 +248,7 @@ function footerActionHTML(order) {
 /* ── Render single order card ────────────────────────────────── */
 function renderOrderCard(order) {
   const cfg        = STATUS_CONFIG[order.status] || STATUS_CONFIG.pending;
-  const imgSrc     = PRODUCT_IMGS[order.productId] || '../../img/oscobox.jpeg';
+  const imgSrc     = PRODUCT_IMGS[order.productId] || '../../img/oscobox.jpg';
   const showTracker = order.status !== 'cancelled';
 
   const li = document.createElement('li');
@@ -286,7 +286,7 @@ function renderOrderCard(order) {
         src="${imgSrc}"
         alt="${order.name}"
         class="order-card__product-img"
-        onerror="this.src='../../img/oscobox.jpeg'"
+        onerror="this.src='../../img/oscobox.jpg'"
         loading="lazy"
       />
       <div class="order-card__product-info">

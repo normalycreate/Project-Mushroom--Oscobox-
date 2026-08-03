@@ -279,7 +279,13 @@ ul, ol {
 .navbar__link:hover::after {
   width: 100%;
 }
-
+/* ── Active navbar link ── */
+.navbar__link--active {
+  background-color: #E8F5E9;
+  padding: 5px 10px;
+  border-radius: var(--radius-lg);
+  color: var(--color-primary-deep);
+}
 /* Auth buttons — removed from all pages */
 .navbar__actions,
 .navbar__mobile-actions { display: none; }

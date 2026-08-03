@@ -27,8 +27,9 @@
       <nav class="navbar__nav" aria-label="Navigasi utama">
         <ul class="navbar__list">
           <li><a href="../../index.html#home"          class="navbar__link">Home</a></li>
+          <li><a href="promo.html"                     class="navbar__link navbar__link--active">Poin</a></li>
+          <li><a href="../Tutorial/tutorial.html"      class="navbar__link">Tips</a></li>
           <li><a href="../Shopping/shopping.html"      class="navbar__link">Store</a></li>
-          <li><a href="promo.html"                     class="navbar__link navbar__link--active">Promo</a></li>
           <li><a href="../Order/order.html"            class="navbar__link">Order</a></li>
         </ul>
       </nav>
@@ -43,10 +44,11 @@
 
     <nav class="navbar__mobile" id="mobileMenu" aria-label="Navigasi mobile" aria-hidden="true">
       <ul class="navbar__mobile-list">
-        <li><a href="../../index.html#home"          class="navbar__mobile-link">Beranda</a></li>
-        <li><a href="../Shopping/shopping.html"      class="navbar__mobile-link">Toko</a></li>
-        <li><a href="promo.html"                     class="navbar__mobile-link">Promo</a></li>
-        <li><a href="../Order/order.html"            class="navbar__mobile-link">Pesanan</a></li>
+        <li><a href="../../index.html#home"          class="navbar__mobile-link">Home</a></li>
+        <li><a href="promo.html"                     class="navbar__mobile-link">Poin</a></li>
+        <li><a href="../Tutorial/tutorial.html"      class="navbar__mobile-link">Tips</a></li>
+        <li><a href="../Shopping/shopping.html"      class="navbar__mobile-link">Store</a></li>
+        <li><a href="../Order/order.html"            class="navbar__mobile-link">Order</a></li>
       </ul>
     </nav>
   </header>
@@ -139,7 +141,7 @@
             <p class="promo-card__hint">
               Coba: <button type="button" class="hint-code" data-code="PROMO2026" title="Gunakan kode PROMO2026">PROMO2026</button>,
               <button type="button" class="hint-code" data-code="GREEN10" title="Gunakan kode GREEN10">GREEN10</button>, atau
-              <button type="button" class="hint-code" data-code="WELCOME5" title="Gunakan kode WELCOME5">WELCOME5</button>
+              <button type="button" class="hint-code" data-code="EARTH2026" title="Gunakan kode EARTH2026">EARTH2026</button>
             </p>
 
             <form class="code-form" id="codeForm" novalidate aria-label="Formulir masuk kode produk">
@@ -150,7 +152,7 @@
                   id="codeInput"
                   class="code-form__input"
                   placeholder="contoh: PROMO2026"
-                  maxlength="12"
+                  maxlength="25"
                   autocomplete="off"
                   spellcheck="false"
                   aria-describedby="codeHint codeMsg"
@@ -158,7 +160,7 @@
               </div>
               <p class="code-form__note" id="codeHint">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                Kode tidak peka huruf besar/kecil. Maks 1 kode per kali.
+                Kode tidak peka huruf besar/kecil. Untuk reset voucher gunakan kode khusus.
               </p>
               <p class="code-form__msg" id="codeMsg" role="alert" aria-live="polite"></p>
 
